@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#14181c">
+<meta name="apple-mobile-web-app-title" content="Light Duty">
+<title>MagTec Light Duty Vehicle Checklist</title>
+<style>
+:root{color-scheme:dark;--bg:#14181c;--panel:#1c2127;--line:#36404a;--text:#eef1f4;--sub:#adb7c1;--amber:#f5a623}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 'Segoe UI',Roboto,Helvetica,Arial,sans-serif;padding:20px 12px 32px}.app{max-width:880px;margin:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}.head{padding:22px 24px 18px;border-bottom:1px solid var(--line)}.brand{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--amber);text-transform:uppercase}h1{font-size:24px;line-height:1.25;font-weight:600;margin:6px 0 8px}h2{font-size:20px;font-weight:600;margin:0 0 8px}p{margin:0 0 16px}.sub{color:var(--sub);font-size:14px}.head p{margin:0}.steps{display:flex;flex-wrap:wrap;gap:6px;padding:14px 24px;border-bottom:1px solid var(--line)}.step{border:1px solid var(--line);background:var(--bg);color:var(--sub);border-radius:6px;min-height:44px;padding:9px 12px;font:600 13px/1.3 'Segoe UI',Roboto,Helvetica,Arial,sans-serif;cursor:pointer}.step[aria-current=step]{background:var(--amber);border-color:var(--amber);color:#211809}.progress{height:4px;background:var(--line)}#progressFill{height:100%;width:0;background:var(--amber)}.content{padding:24px}.panel[hidden]{display:none!important}.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}label,.field-label{display:block;font-size:14px;font-weight:600;margin-bottom:7px}input,select,textarea{width:100%;min-width:0;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:12px;font:16px/1.4 'Segoe UI',Roboto,Helvetica,Arial,sans-serif}textarea{resize:vertical;min-height:88px}input,select{min-height:48px}input:focus,select:focus,textarea:focus{outline:2px solid var(--amber);outline-offset:1px}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--amber);outline-offset:3px}.field-help{color:var(--sub);font-size:12px;margin:5px 0 0}.check{padding:18px 0;border-bottom:1px solid var(--line)}.check:first-child{padding-top:0}.check:last-child{border-bottom:0}.item-name{font-size:16px;font-weight:600;margin:0 0 12px}.number{color:var(--amber);display:inline-block;min-width:28px}.check-fields{display:grid;grid-template-columns:150px 90px minmax(0,1fr);gap:12px;align-items:start}.comment textarea{min-height:48px;height:48px}.expiry{margin-top:12px;max-width:290px}.check[data-result=Fail]{border-left:3px solid #ff9389;padding-left:12px}.check[data-result=Pass]{border-left:3px solid #62c994;padding-left:12px}.check[data-result="N/A"]{border-left:3px solid #a5b8cf;padding-left:12px}.tire{border-bottom:1px solid var(--line);padding:18px 0}.tire:first-child{padding-top:0}.tire-name{font-weight:600;margin-bottom:10px}.notes{margin-top:24px}.foot{display:flex;gap:12px;border-top:1px solid var(--line);padding:18px 24px}.button{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:12px 16px;border:1px solid var(--line);border-radius:7px;text-decoration:none;font:600 15px/1.4 'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);cursor:pointer;text-align:center}.primary{background:var(--amber);border-color:var(--amber);color:#211809}.primary:hover{background:#ffbb4d}.grow{flex:1}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}.actions .button{flex:1 1 180px}.notice{padding:14px;border:1px solid #846332;border-radius:7px;background:#30281b;color:var(--text);font-size:14px;margin-bottom:18px}.recipients{padding:14px;background:var(--bg);border-radius:7px;margin:16px 0;overflow-wrap:anywhere;font-size:13px}.recipients strong{display:block;margin-bottom:4px;color:var(--sub)}.report{font:14px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;min-height:360px;white-space:pre-wrap}.backup{border:1px solid var(--line);border-radius:7px;padding:14px;margin-top:18px}.backup summary{font-size:14px;font-weight:600;cursor:pointer;min-height:28px}.backup p{margin-top:12px;margin-bottom:8px}.status{font-size:13px;color:var(--sub);min-height:20px;margin-top:10px}.bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 24px;border-top:1px solid var(--line)}.bottom .button{font-size:12px;min-height:40px;padding:8px 12px}.bottom small{color:var(--sub);font-size:12px}.step-count{font-size:12px;color:var(--sub);margin-bottom:12px}noscript{display:block;padding:24px;color:var(--text)}
+@media(max-width:620px){body{padding:0}.app{border:0;border-radius:0}.head,.content{padding:20px 16px}.steps{padding:12px 16px;gap:5px}.step{flex:1 1 28%;font-size:12px;padding:8px}.fields{grid-template-columns:1fr}.check-fields{grid-template-columns:minmax(0,1fr) 90px}.comment{grid-column:1/-1}.comment textarea{height:72px}.foot,.bottom{padding:16px}.tire .fields{grid-template-columns:1fr 1fr}.report{font-size:13px}.bottom{align-items:flex-start}.head h1{font-size:22px}}
+</style>
+</head>
+<body>
+<main class="app">
+  <header class="head"><div class="brand">MagTec Alaska</div><h1>Light Duty Vehicle Checklist</h1><p class="sub">Complete the inspection, then open the filled-out email.</p></header>
+  <nav class="steps" aria-label="Inspection sections">
+    <button type="button" class="step" data-step="0" aria-controls="detailsPanel" aria-current="step">1. Details</button>
+    <button type="button" class="step" data-step="1" aria-controls="checksOne">2. Checklist 1</button>
+    <button type="button" class="step" data-step="2" aria-controls="checksTwo">3. Checklist 2</button>
+    <button type="button" class="step" data-step="3" aria-controls="tiresPanel">4. Tires &amp; notes</button>
+    <button type="button" class="step" data-step="4" aria-controls="review">5. Review &amp; email</button>
+  </nav>
+  <div class="progress" aria-hidden="true"><div id="progressFill"></div></div>
+  <noscript>Open this page in Safari, Chrome, or Edge with JavaScript enabled to fill out the inspection.</noscript>
+  <div class="content" id="content" hidden>
+    <div id="stepCount" class="step-count" aria-live="polite"></div>
+    <section class="panel" id="detailsPanel" aria-labelledby="detailsTitle">
+      <h2 id="detailsTitle">Vehicle &amp; inspector details</h2>
+      <p class="sub">Enter the information for this inspection. Your initials are copied to each result when you select it.</p>
+      <div class="fields">
+        <div><label for="asset">Asset number</label><input id="asset" data-key="asset" type="text" autocomplete="off"></div>
+        <div><label for="technician">Technician / inspector name</label><input id="technician" data-key="technician" type="text" autocomplete="name"></div>
+        <div><label for="date">Inspection date</label><input id="date" data-key="date" type="date"></div>
+        <div><label for="initials">Your initials</label><input id="initials" data-key="initials" type="text" autocomplete="off"><p class="field-help">You can change the initials on any individual item.</p></div>
+        <div><label for="project">Project location</label><input id="project" data-key="project" type="text" autocomplete="off"></div>
+        <div><label for="site">Site</label><input id="site" data-key="site" type="text" autocomplete="off"></div>
+        <div><label for="vehicle">Vehicle type</label><input id="vehicle" data-key="vehicle" type="text" autocomplete="off"></div>
+        <div><label for="milesHours">Miles / hours</label><input id="milesHours" data-key="milesHours" type="text" autocomplete="off"><p class="field-help">Include miles, hours, or both.</p></div>
+      </div>
+    </section>
+    <section class="panel" id="checksOne" aria-labelledby="checksOneTitle" hidden>
+      <h2 id="checksOneTitle">Vehicle checklist - page 1</h2><p class="sub">Select N/A, Pass, or Fail and enter initials for each item. Add comments wherever needed.</p><div id="itemsOne"></div>
+    </section>
+    <section class="panel" id="checksTwo" aria-labelledby="checksTwoTitle" hidden>
+      <h2 id="checksTwoTitle">Vehicle checklist - page 2</h2><p class="sub">Continue the checklist and record registration and insurance expiration dates.</p><div id="itemsTwo"></div>
+    </section>
+    <section class="panel" id="tiresPanel" aria-labelledby="tiresTitle" hidden>
+      <h2 id="tiresTitle">Tires</h2><p class="sub">Enter PSI and tread depth for each tire. Include the units with tread depth, such as 8/32 in.</p><div id="tires"></div>
+      <div class="notes"><label for="notes">Comments / notes</label><textarea id="notes" data-key="notes" rows="5"></textarea></div>
+    </section>
+    <section class="panel" id="review" aria-labelledby="reviewTitle" hidden>
+      <h2 id="reviewTitle">Review &amp; open email</h2>
+      <p class="sub">The full inspection goes in the email body. Review the draft in your email app, then send it.</p>
+      <div id="completion" class="notice"></div>
+      <div class="recipients"><strong>Email recipients</strong><span id="recipientList"></span></div>
+      <div class="actions"><a id="openEmail" class="button primary" href="mailto:NSrentals@magtecalaska.com,nsshop@magtecalaska.com,nsd-mgr@magtecalaska.com">Open filled-out email</a></div>
+      <p id="mailStatus" class="status" role="status"></p>
+      <label for="reportText">Complete email body</label><textarea id="reportText" class="report" readonly spellcheck="false" aria-describedby="reportHelp"></textarea>
+      <p id="reportHelp" class="field-help">This includes every checklist item, result, initials, comment, expiration date, tire reading, and note.</p>
+      <details class="backup" id="backup">
+        <summary>Backup if the email opens with missing text</summary>
+        <p class="sub">Some phones limit how much text can be passed to an email app. Copy the complete report, open an email with the recipients filled in, then paste the report into the body.</p>
+        <div class="actions"><button id="copyReport" class="button" type="button">1. Copy full report</button><a id="shortEmail" class="button" href="mailto:NSrentals@magtecalaska.com,nsshop@magtecalaska.com,nsd-mgr@magtecalaska.com">2. Open email to paste</a></div>
+        <button id="selectReport" class="button" type="button">Select report for manual copy</button>
+        <p id="copyStatus" class="status" role="status"></p>
+        <p class="field-help">If your device blocks copying or opening email from this browser, open your approved email app and use the recipient addresses and report shown above.</p>
+      </details>
+    </section>
+  </div>
+  <div class="foot" id="foot" hidden><button class="button" id="back" type="button">Back</button><button class="button primary grow" id="next" type="button">Next</button></div>
+  <footer class="bottom"><small id="draftStatus" role="status">Your entries stay here while you fill out the form.</small><button class="button" id="clear" type="button">Start over</button></footer>
+</main>
+<script id="reportLogic">
+var LightDutyReport=(function(){
+  'use strict';
+  var recipients=['NSrentals@magtecalaska.com','nsshop@magtecalaska.com','nsd-mgr@magtecalaska.com'];
+  var items=['Body Damage','Windows & Mirrors','Winter Front','Battery Charger & Battery','Engine Oil Pan Heater','Transmission Pan Heater','Block/Coolant Heater','Windshield Wipers','Engine Oil Level','Coolant Level','Brake Fluid','Power Steering Fluid','Transmission Fluid','Windshield Washer Fluid','Marker Lights','Headlights & Taillights','Brake, Turn & Reverse Signals','4X4 Operation','Horn','Gauges (Fuel, Battery, Oil)','Seat Covers','Seat Belts','Floor Mats','Fire Extinguisher/First Aid','No Loose Items in Cab','Spare Tire Jack','Mud Flaps','Interiors & Exteriors Clean','Tags & Registration','Insurance'];
+  var tires=['Left Front','Right Front','Right Rear','Left Rear','Spare'];
+  function str(v){return v==null?'':String(v);}
+  function value(v){return str(v).trim()?str(v):'Not recorded';}
+  function newline(v){return str(v).replace(/\r\n|\r|\n/g,'\r\n');}
+  function today(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  function fresh(){return {version:1,fields:{date:today()},checks:items.map(function(){return {result:'',initials:'',comment:'',expiry:''};}),tires:tires.map(function(){return {psi:'',tread:''};})};}
+  function normalize(s){var d=fresh();if(!s||s.version!==1)return d;Object.keys(s.fields||{}).forEach(function(k){d.fields[k]=str(s.fields[k]);});d.checks.forEach(function(c,i){var a=(s.checks||[])[i]||{};Object.keys(c).forEach(function(k){c[k]=str(a[k]);});if(['','N/A','Pass','Fail'].indexOf(c.result)<0)c.result='';});d.tires.forEach(function(t,i){var a=(s.tires||[])[i]||{};t.psi=str(a.psi);t.tread=str(a.tread);});return d;}
+  function counts(s){var c={Pass:0,Fail:0,'N/A':0,missing:0,initials:0};s.checks.forEach(function(r){if(r.result)c[r.result]++;else c.missing++;if(r.result&&!r.initials.trim())c.initials++;});return c;}
+  function report(s){
+    var f=s.fields,lines=['LIGHT DUTY VEHICLE CHECKLIST','',
+      'Project location: '+value(f.project),'Site: '+value(f.site),'Inspection date: '+value(f.date),
+      'Vehicle type: '+value(f.vehicle),'Asset #: '+value(f.asset),'Miles/Hours: '+value(f.milesHours),
+      'Technician/Inspector: '+value(f.technician),'Inspector initials: '+value(f.initials),
+      '','CHECKLIST - PAGE 1','Format: Item | Result | Initials'];
+    items.forEach(function(label,i){
+      if(i===20)lines.push('','CHECKLIST - PAGE 2');
+      var c=s.checks[i];
+      lines.push((i+1)+'. '+label+' | '+value(c.result)+' | '+value(c.initials));
+      lines.push('Comment: '+(c.comment.trim()?c.comment:'None entered'));
+      if(i===28||i===29)lines.push('EXP Date: '+value(c.expiry));
+    });
+    lines.push('','TIRES - PSI / TREAD DEPTH');
+    tires.forEach(function(label,i){lines.push(label+': PSI '+value(s.tires[i].psi)+' | Tread '+value(s.tires[i].tread));});
+    lines.push('','COMMENTS / NOTES',f.notes&&f.notes.trim()?f.notes:'None entered');
+    var c=counts(s);lines.push('','RESULT COUNTS','Pass: '+c.Pass+' | Fail: '+c.Fail+' | N/A: '+c['N/A']+' | Not recorded: '+c.missing,'','END OF INSPECTION');
+    return newline(lines.join('\n'));
+  }
+  function subject(s){return 'Light Duty Inspection - '+value(s.fields.asset)+' - '+value(s.fields.date);}
+  function encode(v){var s=str(v);if(s.toWellFormed)s=s.toWellFormed();else s=s.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDFFF]/g,function(m){return m.length===2?m:'\uFFFD';});return encodeURIComponent(s);}
+  function link(s,withBody){return 'mailto:'+recipients.join(',')+'?subject='+encode(subject(s))+(withBody?'&body='+encode(report(s)):'');}
+  return {recipients:recipients,items:items,tires:tires,fresh:fresh,normalize:normalize,counts:counts,report:report,link:link};
+})();
+</script>
+<script>
+(function(){
+  'use strict';
+  var R=LightDutyReport,KEY='magtec-light-duty-draft-v1',state=R.fresh(),step=0;
+  var panels=['detailsPanel','checksOne','checksTwo','tiresPanel','review'];
+  function el(id){return document.getElementById(id);}
+  try{var saved=localStorage.getItem(KEY);if(saved){state=R.normalize(JSON.parse(saved));el('draftStatus').textContent='Saved draft restored on this device.';}}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state));el('draftStatus').textContent='Draft saved on this device.';}catch(e){el('draftStatus').textContent='Keep this page open to retain your entries.';}}
+  function element(tag,cls,text){var n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;}
+  function field(parent,labelText,id,control){var wrap=element('div');var label=element('label','',labelText);label.htmlFor=id;control.id=id;wrap.append(label,control);parent.appendChild(wrap);return wrap;}
+  function input(type,value){var n=element('input');n.type=type;n.value=value||'';n.autocomplete='off';return n;}
+  function buildItems(){
+    R.items.forEach(function(name,i){
+      var c=state.checks[i],row=element('div','check');row.dataset.result=c.result;
+      var heading=element('h3','item-name'),number=element('span','number',String(i+1)+'.');heading.append(number,document.createTextNode(name));row.appendChild(heading);
+      var grid=element('div','check-fields');
+      var result=element('select');[['','Select result'],['N/A','N/A'],['Pass','Pass'],['Fail','Fail']].forEach(function(v){var opt=element('option','',v[1]);opt.value=v[0];result.appendChild(opt);});result.value=c.result;
+      field(grid,'Result','result'+i,result);
+      var initials=input('text',c.initials);field(grid,'Initials','initials'+i,initials);
+      var comment=element('textarea');comment.rows=1;comment.value=c.comment;field(grid,'Comment','comment'+i,comment).className='comment';
+      result.addEventListener('change',function(){c.result=result.value;if(c.result&&!initials.value.trim()&&state.fields.initials){initials.value=state.fields.initials;c.initials=initials.value;}row.dataset.result=c.result;save();});
+      initials.addEventListener('input',function(){c.initials=initials.value;save();});comment.addEventListener('input',function(){c.comment=comment.value;save();});
+      row.appendChild(grid);
+      if(i===28||i===29){var expiration=input('date',c.expiry);field(row,'Expiration date','expiry'+i,expiration).className='expiry';expiration.addEventListener('input',function(){c.expiry=expiration.value;save();});}
+      el(i<20?'itemsOne':'itemsTwo').appendChild(row);
+    });
+  }
+  function buildTires(){R.tires.forEach(function(name,i){var t=state.tires[i],row=element('div','tire');row.appendChild(element('div','tire-name',name));var fields=element('div','fields');var psi=input('text',t.psi),tread=input('text',t.tread);field(fields,'PSI','psi'+i,psi);field(fields,'Tread depth','tread'+i,tread);psi.addEventListener('input',function(){t.psi=psi.value;save();});tread.addEventListener('input',function(){t.tread=tread.value;save();});row.appendChild(fields);el('tires').appendChild(row);});}
+  function review(){
+    var c=R.counts(state),summary='Pass: '+c.Pass+' | Fail: '+c.Fail+' | N/A: '+c['N/A']+'.';
+    if(c.missing)summary+=' '+c.missing+' item'+(c.missing===1?' has':'s have')+' no result and will show as Not recorded.';
+    if(c.initials)summary+=' '+c.initials+' selected result'+(c.initials===1?' is':'s are')+' missing initials.';
+    el('completion').textContent=summary;
+    el('reportText').value=R.report(state);el('openEmail').href=R.link(state,true);el('shortEmail').href=R.link(state,false);
+    el('recipientList').textContent=R.recipients.join('; ');
+  }
+  function show(index){
+    step=Math.max(0,Math.min(4,index));
+    panels.forEach(function(id,i){el(id).hidden=i!==step;});
+    document.querySelectorAll('[data-step]').forEach(function(b){if(Number(b.dataset.step)===step)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
+    el('stepCount').textContent='Section '+(step+1)+' of 5';el('progressFill').style.width=((step+1)/5*100)+'%';
+    el('back').hidden=step===0;el('next').hidden=step===4;el('next').textContent=step===3?'Review inspection':'Next';el('foot').hidden=false;
+    if(step===4)review();
+    window.scrollTo(0,0);
+  }
+  document.querySelectorAll('[data-key]').forEach(function(n){n.value=state.fields[n.dataset.key]||'';n.addEventListener('input',function(){state.fields[n.dataset.key]=n.value;save();});});
+  document.querySelectorAll('[data-step]').forEach(function(n){n.addEventListener('click',function(){show(Number(n.dataset.step));});});
+  el('back').addEventListener('click',function(){show(step-1);});el('next').addEventListener('click',function(){show(step+1);});
+  el('openEmail').addEventListener('click',function(){save();el('mailStatus').textContent='Opening your email app. Check that the draft ends with END OF INSPECTION, then send it. If text is missing, use the backup below.';});
+  el('shortEmail').addEventListener('click',function(){el('copyStatus').textContent='Paste the complete report into the email body, review the addresses, then send.';});
+  function selectReport(){var text=el('reportText');text.focus();text.select();text.setSelectionRange(0,text.value.length);}
+  function legacyCopy(){selectReport();var ok=false;try{ok=document.execCommand('copy');}catch(e){}el('copyStatus').textContent=ok?'Full report copied. Open the email to paste it.':'Report selected. Use your device\'s Copy command, then open the email to paste it.';}
+  el('copyReport').addEventListener('click',function(){
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(el('reportText').value).then(function(){el('copyStatus').textContent='Full report copied. Open the email to paste it.';},legacyCopy);}else legacyCopy();
+  });
+  el('selectReport').addEventListener('click',function(){selectReport();el('copyStatus').textContent='Report selected. Use your device\'s Copy command, then open the email to paste it.';});
+  el('clear').addEventListener('click',function(){if(!window.confirm('Clear this inspection and start a new one?'))return;state=R.fresh();try{localStorage.removeItem(KEY);}catch(e){}document.querySelectorAll('[data-key]').forEach(function(n){n.value=state.fields[n.dataset.key]||'';});el('itemsOne').replaceChildren();el('itemsTwo').replaceChildren();el('tires').replaceChildren();buildItems();buildTires();el('mailStatus').textContent='';el('copyStatus').textContent='';el('reportText').value='';el('backup').open=false;el('draftStatus').textContent='New inspection started.';show(0);});
+  buildItems();buildTires();el('content').hidden=false;show(0);
+})();
+</script>
+</body>
+</html>
